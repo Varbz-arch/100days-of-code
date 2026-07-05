@@ -22,7 +22,12 @@ int main() {
     }
     // Print in reverse
     for (int j = i - 1; j >= 0; j--) {
-        printf("%c", str[j]);
+        printf("%c", str[j]); //but the memory stores the old string
     }
     return 0;
 }
+
+// this changes the memory of the string to the new reversed string
+// for (int i = n-1, j = 0; i >= 0; i--) {
+//     temp[j++] = str[i];
+// }
