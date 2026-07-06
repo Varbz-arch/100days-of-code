@@ -26,8 +26,11 @@ int main() {
     }
     return 0;
 }
+// “I am creating a NEW reversed string”
+// char temp[1000];
 
-// this changes the memory of the string to the new reversed string
-// for (int i = n-1, j = 0; i >= 0; i--) {
+// for (int i = n - 1, j = 0; i >= 0; i--) {
 //     temp[j++] = str[i];
 // }
+
+// temp[n] = '\0';   // VERY IMPORTANT
