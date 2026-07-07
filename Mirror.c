@@ -26,7 +26,7 @@ int main() {
     }
     return 0;
 }
-// “I am creating a NEW reversed string”
+// “I am creating a NEW reversed string”   extra memory
 // char temp[1000];
 
 // for (int i = n - 1, j = 0; i >= 0; i--) {
