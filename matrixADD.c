@@ -27,7 +27,7 @@ int main() {
     int m, n;
     scanf("%d %d", &m, &n);
 
-    int a[m][n], b[m][n];
+    int a[m][n], b[m][n], sum[m][n];
 
     // Input first matrix
     for (int i = 0; i < m; i++) {
@@ -42,11 +42,16 @@ int main() {
             scanf("%d", &b[i][j]);
         }
     }
-
+    // Calculate sum
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
     // Print the sum directly
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            printf("%d", a[i][j] + b[i][j]);
+            printf("%d", sum[i][j]);
 
             if (j != n - 1)
                 printf(" ");
