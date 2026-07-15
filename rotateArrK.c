@@ -71,7 +71,7 @@
 // - In-place rotation
 // - Handle k > n
 // - Three reverses achieve rotation
-// 💻 Code Solution
+// Code Solution
 
 #include <stdio.h>
 
@@ -109,6 +109,6 @@ int main() {
     
     return 0;
 }
-// ⏱️ Complexity Analysis
+// Complexity Analysis
 // Time Complexity: O(n)
 // Space Complexity: O(1)
