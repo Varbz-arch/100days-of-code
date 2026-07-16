@@ -9,7 +9,6 @@
 //  The distinct triplets are [-1,0,1] and [-1,-1,2]. 
 //  Notice that the order of the output and the order of the triplets does not matter.
 
-
 #include <stdio.h>
 
 int main() {
