@@ -24,3 +24,59 @@ def twoSum(nums, target):
         seen[num] = i
 
 print(twoSum([2,7,11,15], 9))
+
+# #include <stdio.h>
+# #include <stdlib.h>
+
+# int compare(const void *a, const void *b)
+# {
+#     return (*(int *)a - *(int *)b);
+# }
+
+
+# int main()
+# {
+#     int nums[] = {-1, 0, 1, 2, -1, -4};
+#     int n = 6;
+
+#     int target = 1;
+
+
+#     // Step 1: Sort array
+#     qsort(nums, n, sizeof(int), compare);
+
+
+#     // Step 2: Two pointers
+#     int left = 0;
+#     int right = n - 1;
+
+
+#     while(left < right)
+#     {
+#         int sum = nums[left] + nums[right];
+
+
+#         if(sum == target)
+#         {
+#             printf("%d %d\n", nums[left], nums[right]);
+#             break;
+#         }
+
+
+#         else if(sum < target)
+#         {
+#             // Need a bigger number
+#             left++;
+#         }
+
+
+#         else
+#         {
+#             // Need a smaller number
+#             right--;
+#         }
+#     }
+
+
+#     return 0;
+# }
