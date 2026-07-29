@@ -6,11 +6,14 @@
 // Example:
 // Input:
 // A+B*C
+
 // Output:
 // ABC*+
+
 // Explanation:
 // Operator precedence: * > +
 // Use stack to handle operator precedence and associativity
+
 
 #include <stdio.h>
 #include <ctype.h>
