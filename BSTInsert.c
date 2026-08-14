@@ -1,17 +1,12 @@
-// You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the 
-// insertion. It is guaranteed that the new value does not exist in the original BST.
+// Problem: BST Insert
 
-// Notice that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion.
-// You can return any of them.
+// Implement the solution for this problem.
 
- 
+// Input:
+// - Input specifications
 
-// Example 1:
-
-
-// Input: root = [4,2,7,1,3], val = 5
-// Output: [4,2,7,1,3,5]
-// Explanation: Another accepted tree is:
+// Output:
+// - Output specifications
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,22 +29,22 @@ struct TreeNode* createNode(int val) {
     return newNode;
 }
 
-// Insert into BST
-struct TreeNode* insertIntoBST(struct TreeNode* root, int val) {
+// Insert a value into the BST
+struct TreeNode* insert(struct TreeNode* root, int val) {
 
-    // If empty position is found, create a new node
+    // If tree is empty, create a new node
     if (root == NULL) {
         return createNode(val);
     }
 
     // Insert into left subtree
     if (val < root->val) {
-        root->left = insertIntoBST(root->left, val);
+        root->left = insert(root->left, val);
     }
 
     // Insert into right subtree
     else if (val > root->val) {
-        root->right = insertIntoBST(root->right, val);
+        root->right = insert(root->right, val);
     }
 
     return root;
@@ -66,9 +61,8 @@ void inorder(struct TreeNode* root) {
 }
 
 int main() {
-
+    int n, value;
     struct TreeNode* root = NULL;
-    int n, val;
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
@@ -76,8 +70,8 @@ int main() {
     printf("Enter elements: ");
 
     for (int i = 0; i < n; i++) {
-        scanf("%d", &val);
-        root = insertIntoBST(root, val);
+        scanf("%d", &value);
+        root = insert(root, value);
     }
 
     printf("Inorder traversal: ");
